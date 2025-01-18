@@ -1,0 +1,185 @@
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .grid-3 {
+    gap: 1rem;
+  }
+
+  .skills-right ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  /* Burger */
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .toggle-burger .line-1 {
+    transform: rotate(-45deg) translate(-5px, 7px);
+  }
+
+  .toggle-burger .line-2 {
+    opacity: 0;
+  }
+
+  .toggle-burger .line-3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  /* Navigation */
+nav {
+  position: fixed;
+  width: 50%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  flex-direction: column;
+  background: var(--primaryBackgroundColor);
+  border-left: 1px solid var(--borderColor);
+  z-index: 9;
+  transform: translateX(100%);
+  transition: 0.2s ease-in-out;
+}
+
+nav ul {
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Agar submenu tetap terorganisasi dalam kolom */
+  position: relative;
+  
+}
+
+nav ul li a {
+  color: var(--primaryTextColor);
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.2rem; /* Ukuran font lebih besar untuk kemudahan navigasi */
+}
+
+/* Submenu */
+nav ul li ul {
+  display: none; /* Submenu disembunyikan secara default */
+  position: static; /* Mengikuti layout kolom fixed */
+  background-color: var(--secondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  list-style: none;
+  padding: 10px;
+  margin-top: 10px; /* Jarak antara menu utama dan submenu */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 100%; /* Lebar submenu mengikuti menu utama */
+}
+
+nav ul li ul li {
+  margin: 5px 0;
+  width: 100%; /* Pastikan submenu memenuhi lebar */
+  text-align: center;
+}
+
+nav ul li ul li a {
+  padding: 5px 10px;
+  color: var(--primaryTextColor);
+}
+
+/* Hover untuk menampilkan submenu */
+nav ul li:hover ul {
+  display: flex; /* Tampilkan submenu */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Efek hover */
+nav ul li a:hover {
+  color: var(--hoverTextColor);
+}
+
+nav ul li ul li a:hover {
+  background-color: var(--hoverBackgroundColor);
+  color: var(--hoverTextColor);
+}
+
+/* Navigation Active */
+.nav-active {
+  transform: translateX(0);
+}
+
+/* Root variables */
+:root {
+  --sectionPadding: 4rem 0;
+}
+
+
+  /* Titles */
+  .section-title {
+    font-size: 1.6rem;
+    margin: 0.6rem 0 2.5rem;
+  }
+
+  .pre-title {
+    font-size: 0.8rem;
+  }
+
+  /* Hero Section */
+  #hero {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-right img {
+    width: 70%;
+  }
+
+  .hero-left {
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  .hero-left .pre-title {
+    margin: 0 auto;
+  }
+
+  .hero-name {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 0;
+  }
+}
+
+/* Mobile Size */
+@media screen and (max-width: 640px) {
+  /* Titles */
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .pre-title {
+    font-size: 0.7rem;
+  }
+}
